@@ -13,3 +13,14 @@ let labels = students.map((element) =>{
 })
 
 console.log(labels)
+
+let smartStudents = [];
+
+students.forEach((element) =>{
+    if(element.grades > 70){
+        smartStudents.push(element.name)
+    }
+})
+
+console.log(smartStudents)
+
