@@ -24,3 +24,9 @@ students.forEach((element) =>{
 
 console.log(smartStudents)
 
+selectedStudents = students.filter((element) =>{
+    if(element.grades > 70 && element.id > 120)
+        return true;
+})
+
+console.log(selectedStudents)
