@@ -22,8 +22,8 @@ bikes.forEach(({weight}) => {
     }
 })
 
-let selectedBike = bikes.find(value => {
-    return value.weight == minimum
+let selectedBike = bikes.find(({weight}) => {
+    return weight == minimum
 })
 
 console.log(selectedBike)
