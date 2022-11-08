@@ -1,20 +1,33 @@
+let minimum = Infinity
+
 const bikes = [
     {
         brand: 'Trek',
-        weight: 10
+        weight: 12
     },
     {
         brand: 'Santa Cruz',
-        weight: 11
+        weight: 9
     },
     {
         brand: 'Cannondale',
-        weight: 9
+        weight: 10
     }
 ];
 
-const {brand, weight} = bikes[2];
 
-document.getElementById('print').innerHTML = `${brand} ${weight}`
+bikes.forEach(({weight}) => {
+    if(weight < minimum){
+        minimum = weight
+    }
+})
+
+let selectedBike = bikes.find(value => {
+    return value.weight == minimum
+})
+
+console.log(selectedBike)
+
+document.getElementById('print').innerHTML = `Brand:${selectedBike.brand} weight:${selectedBike.weight}`
 
 
